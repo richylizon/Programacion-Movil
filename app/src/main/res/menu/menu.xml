@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/diario"
+        android:title="@string/diario" />
+    <item
+        android:id="@+id/info"
+        android:title="@string/info_diaria" />
+    <item
+        android:id="@+id/contracciones"
+        android:title="@string/contracciones" />
+    <item
+        android:id="@+id/semana_semana"
+        android:title="@string/semana" />
+    <item
+        android:id="@+id/salir"
+        android:title="@string/salir" />
+</menu>

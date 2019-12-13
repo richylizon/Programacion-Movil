@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.Etapa1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Tabla de cuánto mide y pesa el bebé hasta la semana 17 de gestación"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:visibility="visible"
+                tools:text="Tabla de cuánto mide y pesa el bebé hasta la semana 17 de gestación"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="330dp"
+                app:srcCompat="@drawable/fetoembarazo1banner"
+                tools:srcCompat="@drawable/fetoembarazo1banner" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="En esta primera tabla puedes comprobar la rápida evolución de tu bebé dentro de tu vientre en la primera etapa de embarazo. En estas primeras semanas de embarazo, el bebé llegará a medir unos 18 centímetros en la semana 17, y pesará cerca de 140 gramos."
+                android:textSize="18sp"
+                tools:text="En esta primera tabla puedes comprobar la rápida evolución de tu bebé dentro de tu vientre en la primera etapa de embarazo. En estas primeras semanas de embarazo, el bebé llegará a medir unos 18 centímetros en la semana 17, y pesará cerca de 140 gramos." />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Y sí, tú te notarás más hinchada y pensarás que no es posible. Recuerda que durante las primeras semanas de embarazo, el cuerpo retiene mucho líquido y además al peso del bebé hay que añadir el peso de la placenta y el líquido amniótico"
+                android:textSize="18sp"
+                tools:text="Y sí, tú te notarás más hinchada y pensarás que no es posible. Recuerda que durante las primeras semanas de embarazo, el cuerpo retiene mucho líquido y además al peso del bebé hay que añadir el peso de la placenta y el líquido amniótico" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

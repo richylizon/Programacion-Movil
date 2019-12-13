@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Programacion Movil</string>
+    <string name="create_account"><font color="#00ff00">text</font></string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="username">Nombre de Usuario</string>
+    <string name="register">Registro</string>
+    <string name="back_to_login">Volver al login</string>
+    <string name="menu_opciones">Opciones</string>
+    <string name="diario">Diario</string>
+    <string name="info_diaria">Informacion Diaria</string>
+    <string name="txt_diario"> </string>
+    <string name="contracciones"> Contracciones </string>
+    <string name="boton_siguiente">Siguiente</string>
+    <string name="salir">Salir</string>
+    <string name="title_activity_semana_peso_feto">Semana_peso_feto</string>
+    <string name="semana17">semana 17</string>
+    <string name="semana18_29">semana 18 a la 29</string>
+    <string name="últimas_semanas">últimas semanas </string>
+    <string name="semana">Inf. Semana a Semana y tamaño del feto</string>
+    <string name="title_activity_semana_feto">Semana_feto</string>
+    <string name="tab_text_1">Semana 17</string>
+    <string name="tab_text_2">Semana 18-29</string>
+    <string name="tab_text_3">Ultimas Semanas</string>
+    <string name="escribir_nota">Escribir Nota</string>
+    <string name="boton_diario">Diario</string>
+
+    <string name="txt_codigo">Codigo</string>
+    <string name="txt_titulo">Titulo de la Nota</string>
+    <string name="txt_descripcion">Descripcion de la Nota</string>
+    <string name="txt_fecha">Fecha</string>
+
+    <string name="boton_agregar">Agregar</string>
+    <string name="boton_guardar">Guardar</string>
+    <string name="boton_eliminar">Eliminar</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_feto_semana">FetoSemana</string>
+</resources>
