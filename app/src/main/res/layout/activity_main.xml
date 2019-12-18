@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E91E63"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/Boton_feto"
+        android:layout_width="412dp"
+        android:layout_height="153dp"
+        android:layout_marginTop="159dp"
+        android:layout_marginBottom="77dp"
+        android:contentDescription="@string/ID"
+        android:onClick="Info_semanal_feto"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSalir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Boton_Contrac"
+        app:srcCompat="@mipmap/tamf" />
+
+    <ImageButton
+        android:id="@+id/Boton_Info"
+        android:layout_width="205dp"
+        android:layout_height="154dp"
+        android:layout_marginStart="203dp"
+        android:layout_marginLeft="203dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="580dp"
+        android:contentDescription="@string/ID"
+        android:onClick="Info"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.455"
+        app:srcCompat="@mipmap/infodiario" />
+
+    <Button
+        android:id="@+id/buttonSalir"
+        style="@android:style/Widget.Button.Inset"
+        android:layout_width="413dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="#DAC2C2"
+        android:contentDescription="@string/ID"
+        android:onClick="Salir"
+        android:scaleType="fitXY"
+        android:text="@string/salir"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Boton_feto"
+        tools:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/botonDiario"
+        android:layout_width="205dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="203dp"
+        android:layout_marginRight="203dp"
+        android:layout_marginBottom="580dp"
+        android:contentDescription="@string/ID"
+        android:onClick="Diarioper"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Boton_Info"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.455"
+        app:srcCompat="@mipmap/diario" />
+
+    <ImageButton
+        android:id="@+id/Boton_Contrac"
+        android:layout_width="411dp"
+        android:layout_height="153dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginBottom="100dp"
+        android:contentDescription="@string/ID"
+        android:onClick="Contracciones"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/contraccio" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

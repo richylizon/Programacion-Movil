@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
                         Snackbar.make(buttonLogin, "Existosamente haz entrado!", Snackbar.LENGTH_LONG).show();
 
                         //User Logged in Successfully Launch You home screen activity
-                       Intent intent=new Intent(LoginActivity.this,PanelDiario.class);
+                       Intent intent=new Intent(LoginActivity.this,MainActivity.class);
                         startActivity(intent);
                        // finish();
                     } else {
