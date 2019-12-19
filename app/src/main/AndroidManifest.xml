@@ -28,6 +28,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".PanelDiario" />
+        <activity android:name=".EditarEliminarNota"></activity>
         <activity android:name=".EscribirNota" />
         <activity
             android:name=".RegisterActivity"

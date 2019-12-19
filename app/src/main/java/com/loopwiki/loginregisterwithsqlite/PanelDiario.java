@@ -1,9 +1,12 @@
 package com.loopwiki.loginregisterwithsqlite;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,51 +18,91 @@ import java.util.Collections;
 
 public class PanelDiario extends AppCompatActivity {
 
-    private HeaderAdapter headerAdapter;
+    ArrayList<NotasVo> listaNotas;
+    RecyclerView recyclerNotas;
+
+    ConexionSQLiteHelper conn;
+
+    String titulo = "Diario";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_panel_diario);
+
+        this.setTitle(titulo);
 
         //agregar el boton de atras
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        //
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_panel_diario);
+        actualizar();
 
-        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
+    }
 
-        //Disposicion de los Items, como se organizan los Items
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(linearLayoutManager);
+    private void actualizar(){
+        listaNotas = new ArrayList<>();
+        conn = new ConexionSQLiteHelper(getApplicationContext(),"bd_diario",null,1);
 
-        //Datos que vienen de la BD
-        ArrayList<Header> myDataset = new ArrayList<>();
-        myDataset.add(new Header("188998","Segundo Ejemplo","9 de Diciembre de 2019",".d vV>rsbv.bubvr"));
-        myDataset.add(new Header("234556","Tercer Ejemplo","10 de Diciembre de 2019",",knvkBVUKBEVV"));
-        myDataset.add(new Header("345566","Cuarto Ejemplo","11 de Diciembre de 2019","JKVDSNLKESBKUU"));
-        myDataset.add(new Header("488998","Segundo Ejemplo","9 de Diciembre de 2019",".linli.ubuv"));
-        myDataset.add(new Header("534556","Tercer Ejemplo","10 de Diciembre de 2019",",jbb,kuyggukg"));
-        myDataset.add(new Header("645566","Cuarto Ejemplo","11 de Diciembre de 2019","....uubytctc,vhvhvh"));
-        myDataset.add(new Header("788998","Segundo Ejemplo","9 de Diciembre de 2019",".kkjbbyvyv"));
-        myDataset.add(new Header("834556","Tercer Ejemplo","10 de Diciembre de 2019","123456789dfghhjk"));
-        myDataset.add(new Header("945566","Cuarto Ejemplo","11 de Diciembre de 2019","nbvcfghjkoiuytrfg"));
-        myDataset.add(new Header("108998","Segundo Ejemplo","9 de Diciembre de 2019",",ijmnuyhbgtrfcde"));
-        myDataset.add(new Header("114556","Tercer Ejemplo","10 de Diciembre de 2019",",bvctvythyrdfghj"));
-        myDataset.add(new Header("125566","Cuarto Ejemplo","11 de Diciembre de 2019","vacio"));
+        recyclerNotas = (RecyclerView)findViewById(R.id.RecyclerId);
+        recyclerNotas.setLayoutManager(new LinearLayoutManager(this));
 
+        consultarDiario();
 
+        //llenarPersonajes();
+        Collections.reverse(listaNotas);
+        AdapterDatos adapter = new AdapterDatos(listaNotas);
 
-        //Asociar con un Adapter convertir datos en los items del recyclerView
-        Collections.reverse(myDataset);
-        headerAdapter = new HeaderAdapter(myDataset);
-        recyclerView.setAdapter(headerAdapter);
+        adapter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Toast.makeText(getApplicationContext(),
+                        //"Seleccion " + listaNotas.get(recyclerNotas.getChildAdapterPosition(view)).getTitulo(),
+                        //Toast.LENGTH_SHORT).show();
+                String p_id = listaNotas.get(recyclerNotas.getChildAdapterPosition(view)).getCodigo();
+                String p_fecha = listaNotas.get(recyclerNotas.getChildAdapterPosition(view)).getFecha();
+                String p_titulo = listaNotas.get(recyclerNotas.getChildAdapterPosition(view)).getTitulo();
+                String p_descripcion = listaNotas.get(recyclerNotas.getChildAdapterPosition(view)).getDescripcion();
+                pasarDatos(p_id, p_fecha, p_titulo, p_descripcion);
+
+            }
+        });
+
+        recyclerNotas.setAdapter(adapter);
+    }
+
+    private void pasarDatos(String id, String fecha, String titulo, String descripcion) {
+        SQLiteDatabase db = conn.getReadableDatabase();
+
+        Intent i = new Intent(this,EditarEliminarNota.class);
+        i.putExtra("valor_id",id);
+        i.putExtra("valor_fecha",fecha);
+        i.putExtra("valor_titulo",titulo);
+        i.putExtra("valor_descripcion",descripcion);
+        startActivity(i);
+    }
+
+    private void consultarDiario() {
+        SQLiteDatabase db = conn.getReadableDatabase();
+        NotasVo nota = null;
+
+        //obtencion de los datos
+        Cursor cursor = db.rawQuery("SELECT * FROM " + Utilidades.TABLA_DIARIO,null);
+
+        //recorrido de los datos
+        while(cursor.moveToNext()){
+            nota = new NotasVo();
+            nota.setCodigo(cursor.getString(0));
+            nota.setTitulo(cursor.getString(1));
+            nota.setDescripcion(cursor.getString(2));
+            nota.setFecha(cursor.getString(3));
+
+            listaNotas.add(nota);
+        }
     }
 
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.accionespaneldiario, menu);
-        getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
 
@@ -68,33 +111,16 @@ public class PanelDiario extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
 
-        /*if(id == android.R.id.home){
+        if(id == android.R.id.home){
             //termina el activity
-            this.finish();*/
-        /*}else*/ if(id == R.id.b_agregar){
+            this.finish();
+        }else if(id == R.id.b_agregar){
             Intent i = new Intent(this,EscribirNota.class);
             startActivity(i);
+        }else if(id==R.id.b_refrescar){
+            actualizar();
+            Toast.makeText(this,"Diario actualizado", Toast.LENGTH_SHORT).show();
         }
-        else if(id == R.id.diario){
-            Toast.makeText( this, "Diario",Toast.LENGTH_SHORT).show();
-        }
-        else if(id == R.id.info) {
-            Intent intent=new Intent(this, Info_diaria.class);
-            startActivity(intent);
-        }
-        else if(id == R.id.contracciones) {
-            Intent intent=new Intent(this, Contracciones.class);
-            startActivity(intent);
-        }
-        else if(id == R.id.semana_semana) {
-            Intent intent =  new Intent(this, FetoSemana.class );
-            startActivity(intent);
-        }
-        else if(id == R.id.salir){
-            Intent intent=new Intent(this, LoginActivity.class);
-            startActivity(intent);
-        }
-
         return super.onOptionsItemSelected(item);
     }
 }

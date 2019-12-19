@@ -3,13 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/b_agregar"
-        android:icon="@drawable/agregar"
-        android:title="@string/boton_agregar"
+        android:id="@+id/b_guardar"
+        android:icon="@drawable/guardar"
+        android:title="@string/boton_guardar"
         app:showAsAction="always" />
     <item
-        android:id="@+id/b_refrescar"
-        android:icon="@drawable/refrescar"
-        android:title="@string/boton_refrescar"
+        android:id="@+id/b_eliminar"
+        android:icon="@drawable/eliminar"
+        android:title="@string/boton_eliminar"
         app:showAsAction="always" />
 </menu>

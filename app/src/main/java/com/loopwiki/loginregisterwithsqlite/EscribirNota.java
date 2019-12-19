@@ -1,6 +1,9 @@
 package com.loopwiki.loginregisterwithsqlite;
 
+
 import android.app.DatePickerDialog;
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,7 +21,7 @@ public class EscribirNota extends AppCompatActivity implements View.OnClickListe
 
     String titulo = "Escribir Nota";
 
-    private TextView et_Fecha;
+    private TextView tv_Fecha,tv_titulo,tv_descripcion;
     private Button b_Modificar;
     private int dia, mes, anio;
     final Calendar c = Calendar.getInstance();
@@ -35,11 +38,17 @@ public class EscribirNota extends AppCompatActivity implements View.OnClickListe
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //
 
-        et_Fecha = (TextView)findViewById(R.id.et_fecha);
-        b_Modificar = (Button)findViewById(R.id.b_modificar);
+        //conexion con la base de datos
+        ConexionSQLiteHelper conn = new ConexionSQLiteHelper(this,"bd_diario",null,1);
+
+        tv_titulo = (TextView)findViewById(R.id.et_titulo1);
+        tv_descripcion = (TextView)findViewById(R.id.et_descripcion1);
+        tv_Fecha = (TextView)findViewById(R.id.et_fecha1);
+        b_Modificar = (Button)findViewById(R.id.b_modificar1);
 
         b_Modificar.setOnClickListener(this);
-        et_Fecha.setText(c.get(Calendar.DAY_OF_MONTH)+"/"+(c.get(Calendar.MONTH)+1)+"/"+c.get(Calendar.YEAR));
+        tv_Fecha.setText(c.get(Calendar.DAY_OF_MONTH)+"/"+(c.get(Calendar.MONTH)+1)+"/"+c.get(Calendar.YEAR));
+
     }
 
     @Override
@@ -49,14 +58,13 @@ public class EscribirNota extends AppCompatActivity implements View.OnClickListe
             mes = c.get(Calendar.MONTH);
             anio = c.get(Calendar.YEAR);
 
-
             DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int y, int m, int d) {
-                    et_Fecha.setText(d+"/"+(m+1)+"/"+y);
+                    tv_Fecha.setText(d+"/"+(m+1)+"/"+y);
                 }
             }
-            ,anio,mes,dia);
+                    ,anio,mes,dia);
             datePickerDialog.show();
         }
     }
@@ -72,19 +80,34 @@ public class EscribirNota extends AppCompatActivity implements View.OnClickListe
         int id = item.getItemId();
 
         if(id == android.R.id.home){
-            //termina el activity
             this.finish();
         }else if(id == R.id.b_guardar){
-            //implementar guardar en base de datos
-            Toast.makeText(this,"Guardando...", Toast.LENGTH_SHORT).show();
-            this.finish();
-        }else if(id == R.id.b_eliminar){
-            //implementar eliminar en base de datos
-            Toast.makeText(this,"Eliminando...", Toast.LENGTH_SHORT).show();
+            registrarNota();
+            //Toast.makeText(this,"Guardando...",Toast.LENGTH_SHORT).show();
             this.finish();
         }
-
         return super.onOptionsItemSelected(item);
+    }
+
+    private void registrarNota() {
+        ConexionSQLiteHelper conn = new ConexionSQLiteHelper(this,"bd_diario",null,1);
+        SQLiteDatabase db = conn.getWritableDatabase();
+        String aux_titulo = tv_titulo.getText().toString();
+        String aux_descripcion = tv_descripcion.getText().toString();
+
+        if(tv_descripcion.getText().toString()==null){
+            Toast.makeText(getApplicationContext(),"Debes ingresar una descripcion", Toast.LENGTH_SHORT).show();
+        }else{
+            ContentValues valores = new ContentValues();
+
+            valores.put(Utilidades.CAMPO_TITULO,aux_titulo);
+            valores.put(Utilidades.CAMPO_DESCRIPCION,aux_descripcion);
+            valores.put(Utilidades.CAMPO_FECHA,tv_Fecha.getText().toString());
+
+            long idResultante = db.insert(Utilidades.TABLA_DIARIO,Utilidades.CAMPO_ID,valores);
+        }
+        db.close();
+        Toast.makeText(this,"Guardando...", Toast.LENGTH_SHORT).show();
     }
 
     @Override

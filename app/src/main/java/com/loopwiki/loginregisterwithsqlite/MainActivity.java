@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void Diarioper(View view)
     {
-        Intent diario= new Intent(this, EscribirNota.class);
+        Intent diario= new Intent(this, PanelDiario.class);
         startActivity(diario);
     }
 

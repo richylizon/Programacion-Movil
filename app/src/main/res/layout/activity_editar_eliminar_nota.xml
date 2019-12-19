@@ -25,13 +25,12 @@
         android:ems="10"
         android:hint=" Agregar Titulo"
         android:inputType="textPersonName"
-        android:textIsSelectable="true"
         tools:layout_editor_absoluteX="99dp"
         tools:layout_editor_absoluteY="151dp" />
 
     <TextView
         android:id="@+id/et_fecha1"
-        android:layout_width="141dp"
+        android:layout_width="151dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
@@ -48,27 +47,24 @@
     <EditText
         android:id="@+id/et_descripcion1"
         android:layout_width="381dp"
-        android:layout_height="390dp"
+        android:layout_height="394dp"
         android:layout_below="@+id/et_titulo1"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginRight="13dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
         android:layout_marginBottom="15dp"
         android:background="@color/colorfondos"
         android:ems="10"
         android:gravity="start|top"
         android:hint=" Empieza a escribir aqui"
         android:inputType="textMultiLine"
-        android:singleLine="false"
-        android:textIsSelectable="true"
         tools:layout_editor_absoluteX="92dp"
         tools:layout_editor_absoluteY="231dp" />
 
@@ -87,7 +83,7 @@
         android:layout_toEndOf="@+id/et_fecha1"
         android:layout_toRightOf="@+id/et_fecha1"
         android:onClick="onClick"
-        android:text=" Modificar Fecha"
+        android:text="Modificar Fecha"
         android:textSize="18sp" />
 
 </RelativeLayout>

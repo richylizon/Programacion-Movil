@@ -7,9 +7,4 @@
         android:icon="@drawable/guardar"
         android:title="@string/boton_guardar"
         app:showAsAction="always" />
-    <item
-        android:id="@+id/b_eliminar"
-        android:icon="@drawable/eliminar"
-        android:title="@string/boton_eliminar"
-        app:showAsAction="always" />
 </menu>
