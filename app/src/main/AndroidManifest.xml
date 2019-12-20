@@ -14,7 +14,7 @@
         <activity android:name=".MainActivity" />
         <activity
             android:name=".FetoSemana"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".Contracciones"
             android:label="Contracciones"/>
         <activity android:name=".Info_diaria"
