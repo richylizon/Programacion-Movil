@@ -28,16 +28,20 @@
         <activity android:name=".peso_madre.Peso_Madre_Activity"
             android:label="Peso de la Madre">
         </activity>
+
+        <activity
+            android:name=".login2.UserRegistro"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
         <activity android:name=".login2.LoginActivity">
             <intent-filter>
                 <action android:name="Android.intent.action.MAIN" />
                 <category android:name="Android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-            android:name=".login2.UserRegistro"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
+
     </application>
 
 </manifest>
