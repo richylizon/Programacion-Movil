@@ -43,6 +43,20 @@
     <string name="fecha">Fecha</string>
     <string name="boton_refrescar">Refrescar</string>
 
+    <string name="tv1">Las ecografías son de gran importancia durante el embarazo,
+                       ya que permiten descartar ciertas anomalías en el feto.
+                       Es recomendable, realizarse al menos 3 ecografías, una en cada trimestre,
+                       Hay diferentes tipos de ecografía, pero la bidimensional o 2D es la más utilizada y
+                       con ella se pueden detectar hasta el 90% de las anomalías.</string>
+
+
+    <string name="tv_pesoInicial">Peso inicial</string>
+    <string name="tv_ingresarpeso">Ingresar peso del primer día del último periodo:</string>
+    <string name="et_peso">00.0 klg</string>
+    <string name="tv_pesoActual">Peso actual</string>
+    <string name="tv_ingresarpesoactual">Ingresar peso actual:</string>
+    <string name="botonRegistrar">Registrar peso</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_feto_semana">FetoSemana</string>

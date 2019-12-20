@@ -28,6 +28,7 @@
                 android:id="@+id/text_home"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:text="Tabla de cuánto mide y pesa el bebé de la semana 18 a la 29"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textSize="24sp"
@@ -36,7 +37,7 @@
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="match_parent"
-                android:layout_height="375dp"
+                android:layout_height="330dp"
                 app:srcCompat="@drawable/fetoembarazo2" />
 
             <TextView

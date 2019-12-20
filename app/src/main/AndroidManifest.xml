@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.loopwiki.loginregisterwithsqlite">
 
     <application
@@ -9,13 +10,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".FetoSemana"
-            android:label="@string/title_activity_feto_semana"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Contracciones" />
-        <activity android:name=".Info_diaria" />
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Contracciones"
+            android:label="Contracciones"/>
+        <activity android:name=".Info_diaria"
+            android:label="Informacion Diaria"/>
         <activity android:name=".Diario" />
         <activity
             android:name=".LoginActivity"
@@ -28,8 +31,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".PanelDiario" />
-        <activity android:name=".EditarEliminarNota"></activity>
+        <activity android:name=".EditarEliminarNota" />
         <activity android:name=".EscribirNota" />
+        <activity
+            android:name=".ecografias.Eco_Activity"
+            android:label="Ecografias"></activity>
+        <activity android:name=".peso_madre.Peso_Madre_Activity"
+            android:label="Peso de la Madre">
+        </activity>
         <activity
             android:name=".RegisterActivity"
             android:label="@string/app_name"

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/menuseis"
     android:fitsSystemWindows="true">
 
     <LinearLayout
@@ -19,6 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:textColorHint="#E8F0E5E5"
             app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -26,7 +27,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/email"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:textColor="#E1E9DDDD"
+                android:drawableLeft="@drawable/ic_action_mail"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -34,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:textColorHint="#E2EBDDDD"
             app:errorEnabled="true"
             app:passwordToggleEnabled="true"
             app:passwordToggleTint="@color/colorAccent">
@@ -43,7 +47,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="#DAECE4E4"
+                android:drawableLeft="@drawable/ic_action_pass"
+                android:drawableStart="@drawable/ic_action_pass" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -61,8 +68,9 @@
             android:id="@+id/textViewCreateAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
             android:layout_marginTop="16dp"
-            android:gravity="center_horizontal" />
+            android:layout_marginBottom="16dp"
+            android:gravity="center_horizontal"
+            android:textColor="#fff" />
     </LinearLayout>
 </ScrollView>
