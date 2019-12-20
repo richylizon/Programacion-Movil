@@ -19,6 +19,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.loopwiki.loginregisterwithsqlite.login2.LoginActivity;
+
 import java.util.Vector;
 
 public class Contracciones extends AppCompatActivity {

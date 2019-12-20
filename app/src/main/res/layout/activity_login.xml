@@ -1,76 +1,83 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/menuseis"
-    android:fitsSystemWindows="true">
+    android:orientation="vertical"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:orientation="vertical">
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="35dp">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutEmail"
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textColorHint="#E8F0E5E5"
-            app:errorEnabled="true">
+            android:layout_marginTop="10dp"
+            android:text="Bienvenida"
+            android:textSize="35dp" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/email"
-                android:inputType="textEmailAddress"
-                android:textColor="#E1E9DDDD"
-                android:drawableLeft="@drawable/ic_action_mail"/>
-        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="Introduce tu correo y contraseña"
+            android:textSize="17.5dp" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutPassword"
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingTop="100dp"
+        android:paddingRight="24dp">
+
+        <EditText
+            android:id="@+id/etusuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textColorHint="#E2EBDDDD"
-            app:errorEnabled="true"
-            app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/colorAccent">
+            android:layout_marginBottom="8dp"
+            android:hint=" E-mail" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/password"
-                android:inputType="textPassword"
-                android:textColor="#DAECE4E4"
-                android:drawableLeft="@drawable/ic_action_pass"
-                android:drawableStart="@drawable/ic_action_pass" />
-        </com.google.android.material.textfield.TextInputLayout>
+        <EditText
+            android:id="@+id/etpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:hint=" Password"
+            android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/buttonLogin"
+            android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:background="@color/colorAccent"
-            android:onClick="Next"
-            android:text="@string/login"
-            android:textColor="@android:color/white" />
+            android:layout_below="@+id/etpass"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:onClick="ingresar"
+            android:text="ACCEDER" />
 
         <TextView
-            android:id="@+id/textViewCreateAccount"
+            android:id="@+id/signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:gravity="center_horizontal"
-            android:textColor="#fff" />
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="Eres nuevo aqui? Registrate"
+            android:textSize="16dip" />
+
     </LinearLayout>
-</ScrollView>
+
+</LinearLayout>
