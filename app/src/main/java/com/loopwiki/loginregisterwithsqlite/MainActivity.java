@@ -1,6 +1,7 @@
 package com.loopwiki.loginregisterwithsqlite;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -13,17 +14,13 @@ import com.loopwiki.loginregisterwithsqlite.peso_madre.Peso_Madre_Activity;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-  /*  private DatabaseManagerUser databaseManagerUser;
-    private User itemUsuario;
-    private String ident;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
-
+/*
     //se agrego codigo del 39 al 68
     Bundle b = getIntent().getExtras();
 
