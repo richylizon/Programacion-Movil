@@ -14,16 +14,19 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
+import java.util.GregorianCalendar;
 
 public class PanelDiario extends AppCompatActivity {
 
     ArrayList<NotasVo> listaNotas;
     RecyclerView recyclerNotas;
-
     ConexionSQLiteHelper conn;
-
     String titulo = "Diario";
+
+    Calendar c = new GregorianCalendar();
+    private int dia_act; private int mes_act; private int anio_act;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +40,6 @@ public class PanelDiario extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         actualizar();
-
     }
 
     private void actualizar(){
@@ -56,30 +58,43 @@ public class PanelDiario extends AppCompatActivity {
         adapter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Toast.makeText(getApplicationContext(),
-                        //"Seleccion " + listaNotas.get(recyclerNotas.getChildAdapterPosition(view)).getTitulo(),
-                        //Toast.LENGTH_SHORT).show();
                 String p_id = listaNotas.get(recyclerNotas.getChildAdapterPosition(view)).getCodigo();
                 String p_fecha = listaNotas.get(recyclerNotas.getChildAdapterPosition(view)).getFecha();
                 String p_titulo = listaNotas.get(recyclerNotas.getChildAdapterPosition(view)).getTitulo();
                 String p_descripcion = listaNotas.get(recyclerNotas.getChildAdapterPosition(view)).getDescripcion();
-                pasarDatos(p_id, p_fecha, p_titulo, p_descripcion);
 
+                if(p_fecha.equals(fechaActual())){
+                    pasarDatos(p_id, p_titulo, p_descripcion,true);
+                }else{
+                    pasarDatos(p_id, p_titulo, p_descripcion,false);
+                }
             }
         });
-
         recyclerNotas.setAdapter(adapter);
     }
 
-    private void pasarDatos(String id, String fecha, String titulo, String descripcion) {
-        SQLiteDatabase db = conn.getReadableDatabase();
+    public String fechaActual(){
+        dia_act = c.get(Calendar.DAY_OF_MONTH);
+        mes_act = c.get(Calendar.MONTH) + 1;
+        anio_act = c.get(Calendar.YEAR);
+        String fecha = dia_act + "/" + mes_act + "/" + anio_act;
+        return fecha;
+    }
 
+    private void pasarDatos(String id, String titulo, String descripcion, boolean flag) {
         Intent i = new Intent(this,EditarEliminarNota.class);
-        i.putExtra("valor_id",id);
-        i.putExtra("valor_fecha",fecha);
-        i.putExtra("valor_titulo",titulo);
-        i.putExtra("valor_descripcion",descripcion);
-        startActivity(i);
+        Intent j = new Intent(this, verNota.class);
+        if(flag){
+            i.putExtra("valor_idi",id);
+            i.putExtra("valor_tituloi",titulo);
+            i.putExtra("valor_descripcioni",descripcion);
+            startActivity(i);
+        }else{
+            j.putExtra("valor_idj",id);
+            j.putExtra("valor_tituloj",titulo);
+            j.putExtra("valor_descripcionj",descripcion);
+            startActivity(j);
+        }
     }
 
     private void consultarDiario() {
@@ -112,14 +127,13 @@ public class PanelDiario extends AppCompatActivity {
         int id = item.getItemId();
 
         if(id == android.R.id.home){
-            //termina el activity
             this.finish();
         }else if(id == R.id.b_agregar){
             Intent i = new Intent(this,EscribirNota.class);
             startActivity(i);
         }else if(id==R.id.b_refrescar){
             actualizar();
-            Toast.makeText(this,"Diario actualizado", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Diario actualizado",Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
     }

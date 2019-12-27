@@ -49,13 +49,33 @@
                        Hay diferentes tipos de ecografía, pero la bidimensional o 2D es la más utilizada y
                        con ella se pueden detectar hasta el 90% de las anomalías.</string>
 
-
     <string name="tv_pesoInicial">Peso inicial</string>
     <string name="tv_ingresarpeso">Ingresar peso del primer día del último periodo:</string>
-    <string name="et_peso">00.0 klg</string>
+
+    <string name="tv_peso">00,0</string>
     <string name="tv_pesoActual">Peso actual</string>
     <string name="tv_ingresarpesoactual">Ingresar peso actual:</string>
+    <string name="aumentoPeso">El aumento total de peso</string>
+    <string name="botonGuardar">Guardar peso</string>
+    <string name="imgDescription">imagenPeso</string>
+
+    <string name="tvpesoIni">Peso Inicial</string>
+    <string name="tvpesoActual">Peso Actual</string>
+    <string name="tv_IngresarPeso">Ingresar peso y fecha del último periodo:</string>
+    <string name="tvIngresarPesoActual">Ingresar peso y fecha actuales:</string>
+    <string name="et_peso">00.0 klg</string>
+    <string name="botonFecha">Fecha</string>
+    <string name="et_fecha">00/00/00</string>
     <string name="botonRegistrar">Registrar peso</string>
+
+    <string name="tv_fecha">Fecha:</string>
+    <string name="tvAumento">Aumento</string>
+    <string name="tvfecha">00/00/00</string>
+    <string name="tvpeso">00.0 klg</string>
+    <string name="consejo">La mayoría de las mujeres debe aumentar
+                           entre 25 y 35 libras (11.5 a 16 kilogramos)
+                           durante el embarazo.</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -2,11 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/u"
     android:orientation="vertical"
     android:paddingLeft="0dp"
-    android:paddingTop="0dp"
 
+    android:paddingTop="0dp"
     android:paddingRight="0dp"
     android:paddingBottom="0dp">
 
@@ -48,6 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
+            android:drawableLeft="@drawable/ic_action_mail"
             android:hint=" E-mail" />
 
         <EditText
@@ -56,6 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
+            android:drawableLeft="@drawable/ic_action_pass"
             android:hint=" Password"
             android:inputType="textPassword" />
 
@@ -76,6 +79,7 @@
             android:layout_marginBottom="24dp"
             android:gravity="center"
             android:text="Eres nuevo aqui? Registrate"
+            android:textColor="#E1F7F6F6"
             android:textSize="16dip" />
 
     </LinearLayout>

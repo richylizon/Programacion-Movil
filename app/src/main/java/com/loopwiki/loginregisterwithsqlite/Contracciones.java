@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -52,37 +53,14 @@ public class Contracciones extends AppCompatActivity {
         //Inicia la búsqueda de registros guardados en la base de datos en un AsyncTask
         TareaQuery tarea=new TareaQuery();
         tarea.execute("INTERVALO");
+
+        //agregar el boton de atras
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
-    public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
-    }
 
-    public boolean onOptionsItemSelected(MenuItem item){
-        int id = item.getItemId();
-
-        if(id == R.id.diario){
-            Intent intent=new Intent(this,PanelDiario.class);
-            startActivity(intent);
-        }
-        else if(id == R.id.info) {
-            Intent intent=new Intent(this, Info_diaria.class);
-            startActivity(intent);
-        }
-        else if(id == R.id.contracciones) {
-            Toast.makeText( this, "Contador Contracciones",Toast.LENGTH_SHORT).show();
-        }
-        else if(id == R.id.semana_semana) {
-            Intent intent=new Intent(this, FetoSemana.class);
-            startActivity(intent);
-        }
-        else if(id == R.id.salir){
-            Intent intent=new Intent(this, LoginActivity.class);
-            startActivity(intent);
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
     public void controlCronometro(View v){
         if(!iniciado){
@@ -182,6 +160,16 @@ public class Contracciones extends AppCompatActivity {
             super.onProgressUpdate(values);
         }
     }
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                Log.i("ActionBar", "Atrás!");
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
 }

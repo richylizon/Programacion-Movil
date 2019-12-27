@@ -10,37 +10,40 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".citas_medicas.Medic"></activity>
         <activity android:name=".MainActivity" />
         <activity
             android:name=".FetoSemana"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Contracciones"
-            android:label="Contracciones"/>
-        <activity android:name=".Info_diaria"
-            android:label="Informacion Diaria"/>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Contracciones"
+            android:label="Contracciones" />
+        <activity
+            android:name=".Info_diaria"
+            android:label="Informacion Diaria" />
         <activity android:name=".PanelDiario" />
         <activity android:name=".EditarEliminarNota" />
         <activity android:name=".EscribirNota" />
         <activity
             android:name=".ecografias.Eco_Activity"
-            android:label="Ecografias"></activity>
-        <activity android:name=".peso_madre.Peso_Madre_Activity"
-            android:label="Peso de la Madre">
-        </activity>
-
+            android:label="Ecografias" />
+        <activity
+            android:name=".peso_madre.Peso_Madre_Activity"
+            android:label="Peso de la Madre"></activity>
         <activity
             android:name=".login2.UserRegistro"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
-
-
         <activity android:name=".login2.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER"/>
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".peso_madre.SegundoActivity" />
+
+        <activity android:name=".citas_medicas.SecondActivity"></activity>
 
     </application>
 

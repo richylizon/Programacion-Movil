@@ -2,6 +2,9 @@ package com.loopwiki.loginregisterwithsqlite;
 
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -33,11 +36,16 @@ public class FetoSemana extends AppCompatActivity implements Etapa1.OnFragmentIn
                         .setAction("Action", null).show();
             }
         });*/
+        //agregar el boton de atras
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
     public void onFragmentInteraction(Uri uri) {
 
     }
+
+    //funciones para el boton agregar y regresar
+
 
 }

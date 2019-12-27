@@ -4,132 +4,155 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E91E63"
+    android:background="@drawable/munos"
     tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@+id/imageButton11"
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="61dp"
-        android:layout_marginRight="61dp"
-        android:layout_marginBottom="85dp"
-        android:contentDescription="@string/ID"
-        android:onClick="Info_semanal_feto"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton6"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton9"
-        app:srcCompat="@mipmap/tamf" />
-
-    <ImageButton
-        android:id="@+id/imageButton5"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginLeft="13dp"
-        android:layout_marginTop="59dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginBottom="10dp"
-        android:contentDescription="@string/ID"
-        android:onClick="Info"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton9"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/infodiario" />
-
-    <Button
-        android:id="@+id/button"
-        style="@android:style/Widget.Button.Inset"
-        android:layout_width="413dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
-        android:background="#DAC2C2"
-        android:contentDescription="@string/ID"
-        android:onClick="Salir"
-        android:text="@string/salir"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton6"
-        app:layout_constraintStart_toEndOf="@+id/imageButton6"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton6"
-        tools:visibility="visible" />
-
-    <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="59dp"
-        android:layout_marginBottom="1dp"
-        android:contentDescription="@string/ID"
-        android:onClick="Diarioper"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton9"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/diary" />
-
-    <ImageButton
-        android:id="@+id/imageButton9"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginRight="14dp"
-        android:layout_marginBottom="38dp"
-        android:contentDescription="@string/ID"
-        android:onClick="Contracciones"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton11"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton4"
-        app:srcCompat="@mipmap/contraccio" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:contentDescription="@string/ID"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton11"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton5"
-        app:srcCompat="@drawable/citassssss" />
-
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginBottom="204dp"
-        android:contentDescription="@string/ID"
-        android:onClick="Peso"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton11"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
-        app:srcCompat="@drawable/registrooo" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageButton
-        android:id="@+id/imageButton6"
-        android:layout_width="176dp"
-        android:layout_height="173dp"
-        android:layout_marginBottom="17dp"
-        android:contentDescription="@string/ID"
-        android:onClick="Eco"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
-        app:layout_constraintStart_toStartOf="@+id/imageButton4"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton11"
-        app:srcCompat="@drawable/ecografiasss" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imageButton11"
+                android:layout_width="wrap_content"
+                android:layout_height="144dp"
+                android:layout_marginTop="275dp"
+                android:layout_marginEnd="206dp"
+                android:layout_marginRight="206dp"
+                android:layout_marginBottom="255dp"
+                android:contentDescription="@string/ID"
+                android:onClick="Info_semanal_feto"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.529"
+                app:srcCompat="@drawable/tamanofetoftest" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="192dp"
+                android:layout_height="149dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="430dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginRight="7dp"
+                android:contentDescription="@string/ID"
+                android:onClick="Peso"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/pesomadreoficiales" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="206dp"
+                android:layout_height="147dp"
+                android:layout_marginEnd="205dp"
+                android:layout_marginRight="205dp"
+                android:layout_marginBottom="515dp"
+                android:contentDescription="@string/ID"
+                android:onClick="Diarioper"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imageButton5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/diariooficial" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="189dp"
+                android:layout_height="138dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="216dp"
+                android:layout_marginLeft="216dp"
+                android:layout_marginTop="275dp"
+                android:layout_marginBottom="255dp"
+                android:contentDescription="@string/ID"
+                android:onClick="Citas"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.529"
+                app:srcCompat="@drawable/citasoficial" />
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="413dp"
+                android:layout_height="123dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="141dp"
+                android:layout_marginBottom="410dp"
+                android:contentDescription="@string/ID"
+                android:onClick="Contracciones"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/contraccionoficial" />
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="196dp"
+                android:layout_height="142dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginBottom="515dp"
+                android:contentDescription="@string/ID"
+                android:onClick="Info"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/informaciondiariaoficial" />
+
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="205dp"
+                android:layout_height="145dp"
+                android:layout_marginTop="430dp"
+                android:layout_marginEnd="210dp"
+                android:layout_marginRight="210dp"
+                android:layout_marginBottom="120dp"
+                android:contentDescription="@string/ID"
+                android:onClick="Eco"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ecografiasoficial" />
+
+            <Button
+                android:id="@+id/button"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="413dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="600dp"
+                android:layout_marginBottom="20dp"
+                android:background="#DAC2C2"
+                android:contentDescription="@string/ID"
+                android:onClick="Salir"
+                android:text="@string/salir"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:visibility="visible"
+                tools:visibility="visible" />
+
+        </RelativeLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

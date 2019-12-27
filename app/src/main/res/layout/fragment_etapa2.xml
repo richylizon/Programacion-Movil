@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/v"
     tools:context=".fragments.Etapa2">
 
     <ScrollView
-        android:layout_width="414dp"
-        android:layout_height="533dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
         android:layout_marginEnd="1dp"
@@ -27,17 +28,20 @@
             <TextView
                 android:id="@+id/text_home"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:gravity="center"
                 android:text="Tabla de cuánto mide y pesa el bebé de la semana 18 a la 29"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textSize="24sp"
+                android:textColor="#FF9800"
+                android:textColorLink="#FF9800"
+                android:textSize="20sp"
                 tools:text="Tabla de cuánto mide y pesa el bebé de la semana 18 a la 29" />
 
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="match_parent"
-                android:layout_height="330dp"
+                android:layout_height="340dp"
                 app:srcCompat="@drawable/fetoembarazo2" />
 
             <TextView

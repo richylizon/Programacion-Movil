@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/u"
     tools:context=".Contracciones">
 
     <TextView
@@ -14,7 +15,9 @@
         android:text="@string/contracciones"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/chronometer1"
-        tools:layout_editor_absoluteX="1dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_cronometro"
@@ -54,8 +57,8 @@
 
     <Chronometer
         android:id="@+id/chronometer1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="413dp"
+        android:layout_height="65dp"
         android:layout_marginTop="22dp"
         android:layout_marginBottom="28dp"
         android:layout_weight="2"
