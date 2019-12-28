@@ -58,7 +58,7 @@ public class Peso_Madre_Activity extends AppCompatActivity {
                     et_fechaInicial.setText(dayOfMonth+"/"+(monthOfYear+1)+"/"+year);
 
                 }
-            },dia,mes,ano);
+            },ano,dia,mes);
             datePickerDialog.show();
 
         }
@@ -80,7 +80,7 @@ public class Peso_Madre_Activity extends AppCompatActivity {
                     et_fechaActual.setText(dayOfMonth+"/"+(monthOfYear+1)+"/"+year);
 
                 }
-            },dia,mes,ano);
+            },ano,dia,mes);
             datePickerDialog.show();
 
         }

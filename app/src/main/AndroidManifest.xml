@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".citas_medicas.Medic"></activity>
+
         <activity android:name=".MainActivity" />
         <activity
             android:name=".FetoSemana"
@@ -43,8 +43,14 @@
         </activity>
         <activity android:name=".peso_madre.SegundoActivity" />
 
-        <activity android:name=".citas_medicas.SecondActivity"></activity>
 
+
+        <activity android:name=".citas_medicas.View_Note">
+        </activity>
+        <activity android:name=".citas_medicas.Medic"></activity>
+        <activity android:name=".citas_medicas.CreateNote"></activity>
+        <activity android:name=".citas_medicas.Edit_Note"></activity>
+        <activity android:name=".citas_medicas.Alert"></activity>
     </application>
 
 </manifest>

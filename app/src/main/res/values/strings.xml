@@ -76,6 +76,118 @@
                            entre 25 y 35 libras (11.5 a 16 kilogramos)
                            durante el embarazo.</string>
 
+    <string name="title_activity_create_note">Cita</string>
+
+    <string name="title">Test</string>
+
+    <string name="detail">Small Text</string>
+
+
+    <string-array name="note_type">
+
+        <!-- <item>Normal</item>
+
+         <item>Standard</item>
+
+         <item>Urgent</item>-->
+        <item>Notificacion</item>
+
+    </string-array>
+
+    <string name="title_activity_information">Informacion</string>
+
+    <string name="title_activity_edit__note">Editar Cita</string>
+
+    <string name="New">Realizar recordatorio de cita</string>
+
+    <string name="back">Atras</string>
+
+    <string name="save">Guardar Cita</string>
+
+    <string name="edit">Editar Cita</string>
+
+    <string name="discard">Discard Cita</string>
+
+    <string name="note_type_text">Cita:</string>
+
+    <string name="title_activity_alert">Alertar</string>
+
+    <string name="Not_Set">Sin escojer</string>
+
+    <string name="hour_minutes">HH:mm</string>
+
+    <string name="alert_title">title</string>
+    <string name="set_notify">Notificacion</string>
+    <string name="added_alert">An Alerta puede ser agregada</string>
+    <string name="notify">puedes recivir notifications</string>
+    <string name="rodId">ID</string>
+
+    <string name="Alertnotifty">"Alerta: "</string>
+
+    <string name="alerttitle">titutlo</string>
+
+    <string name="delete_title">Eliminar esta cita</string>
+
+    <string name="delete_message">estas segura?</string>
+
+    <string name="yes">Si</string>
+
+    <string name="no">No</string>
+
+    <string name="rodID">ID</string>
+
+    <string name="rowID">ID</string>
+
+    <string name="row_id">ID</string>
+
+    <string name="intent_row_id">ID</string>
+
+    <string name="row_id_long">rowID</string>
+
+    <string name="alarm_active">Una Alerta ouede ser agregada!</string>
+
+    <string name="row_id_log">ID</string>
+
+    <string name="title_hint"> Nombre del Doc</string>
+
+    <string name="hint_description">Descripcion acerca de la cita</string>
+
+    <string name="set_alert">Establecer cita</string>
+
+    <string name="textview_date">Seleccionar Fecha</string>
+
+    <string name="txt_time">Ingrese la hora:</string>
+
+    <string name="txt_edit_hint">Nombre del Doc</string>
+
+    <string name="detail_hint">Ingrese descripcion de la cita</string>
+
+    <string name="type_note">Tipo:</string>
+
+    <string name="view_title">Large Text</string>
+
+    <string name="view_detail">Medium Text</string>
+
+    <string name="note_type">Medium Text</string>
+
+    <string name="type_list_entry">Small Text</string>
+
+    <string name="time_vie">testtime</string>
+
+    <string name="alarmtext">Alerta: </string>
+
+    <string name="dateformate">dd/MM/yyyy</string>
+
+    <string name="Not_Set_Alert">Sin Establecer</string>
+
+    <string name="ok">Ok</string>
+
+    <string name="title_msg">Titulo</string>
+
+    <string name="titttle">Titulo</string>
+    <string name="alert_content">alert_contenido</string>
+
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

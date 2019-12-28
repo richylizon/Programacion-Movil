@@ -17,6 +17,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.loopwiki.loginregisterwithsqlite.citas_medicas.CreateNote;
 import com.loopwiki.loginregisterwithsqlite.citas_medicas.Medic;
 import com.loopwiki.loginregisterwithsqlite.ecografias.Eco_Activity;
 import com.loopwiki.loginregisterwithsqlite.login2.database.DatabaseManagerUser;
@@ -135,7 +136,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public void Citas(View view)
     {
-        Intent citas= new Intent(this, Medic.class);
+        Intent citas= new Intent(this, CreateNote.class);
         startActivity(citas);
     }
     public void Salir(View view)
